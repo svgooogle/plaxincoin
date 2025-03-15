@@ -1,15 +1,15 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
+import TempLogo from './components/TempLogo'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-black text-white">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-8 md:py-16">
+      <section className="container py-8 md:py-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-8 md:mb-0">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
               PLAXIN COIN
             </h1>
             <p className="text-lg md:text-xl mb-6 text-purple-200">
@@ -26,28 +26,20 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-96 md:h-96">
-              <div className="absolute inset-0 bg-purple-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-              <Image
-                src="/logo.png"
-                alt="PLAXIN COIN Logo"
-                width={400}
-                height={400}
-                className="relative z-10 animate-float"
-                priority
-              />
+              <TempLogo />
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-12 md:py-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <section className="container py-12 md:py-24">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
           Преимущества PLAXIN COIN
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="glass p-6 rounded-xl hover:scale-105 transition-transform">
+            <div key={index} className="glass p-6 rounded-xl">
               <div className="text-purple-400 text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -57,8 +49,9 @@ export default function Home() {
       </section>
 
       {/* How to Buy Section */}
-      <section className="container mx-auto px-4 py-12 md:py-24 bg-black bg-opacity-50">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <section className="container py-12 md:py-24 relative">
+        <div className="absolute inset-0 bg-purple-900/20 backdrop-blur-3xl -z-10"></div>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
           Как купить PLAXIN COIN
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -73,13 +66,13 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section className="container mx-auto px-4 py-12 md:py-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <section className="container py-12 md:py-24">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
           Дорожная карта
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {roadmap.map((item, index) => (
-            <div key={index} className="glass p-6 rounded-xl hover:scale-105 transition-transform">
+            <div key={index} className="glass p-6 rounded-xl">
               <div className="text-purple-400 font-bold mb-2">{item.quarter}</div>
               <h3 className="text-xl font-bold mb-4">{item.year}</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -93,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-4 py-8 mt-12 border-t border-purple-800">
+      <footer className="container py-8 mt-12 border-t border-purple-800">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">PLAXIN COIN</h3>
@@ -115,7 +108,7 @@ export default function Home() {
               <a href="#" className="text-gray-300 hover:text-purple-400">
                 <span className="sr-only">Telegram</span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.145.118.181.344.203.483.023.139.041.562.041.562z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.041-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.145.118.181.344.203.483.023.139.041.562.041.562z"/>
                 </svg>
               </a>
               <a href="#" className="text-gray-300 hover:text-purple-400">
