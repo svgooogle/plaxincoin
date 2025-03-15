@@ -1,0 +1,62 @@
+{
+  "name": "PLAXIN COIN",
+  "symbol": "PLAX",
+  "description": "PLAXIN COIN (PLAX) - современный токен на блокчейне Solana, созданный с учетом высоких стандартов безопасности и производительности. Токен использует преимущества экосистемы Solana, обеспечивая быстрые транзакции с минимальными комиссиями. PLAXIN COIN стремится стать надежным цифровым активом для различных финансовых операций и децентрализованных приложений.",
+  "image": "https://cloudflare-ipfs.com/ipfs/bafybeificuapjdproqwaljcqn2jauuwyvgc7yy672xxoosxcfnfd3canyq",
+  "external_url": "https://plaxincoin.com",
+  "attributes": [
+    {
+      "trait_type": "Token Standard",
+      "value": "Fungible"
+    },
+    {
+      "trait_type": "Decimals",
+      "value": "9"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "Token Type",
+      "value": "SPL Token"
+    },
+    {
+      "trait_type": "Category",
+      "value": "DeFi"
+    },
+    {
+      "trait_type": "Launch Date",
+      "value": "2024"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://cloudflare-ipfs.com/ipfs/bafybeificuapjdproqwaljcqn2jauuwyvgc7yy672xxoosxcfnfd3canyq",
+        "type": "image/png"
+      }
+    ],
+    "category": "token",
+    "creators": [
+      {
+        "address": "Ah3HgXqKUH3rwMUhh8W7sTi3WRiS4xgGRg5fJ4WM3otT",
+        "share": 100
+      }
+    ],
+    "links": {
+      "website": "https://plaxincoin.com",
+      "twitter": "https://twitter.com/plaxincoin",
+      "telegram": "https://t.me/plaxincoin",
+      "github": "https://github.com/plaxincoin"
+    },
+    "features": [
+      "Fast transactions",
+      "Low fees",
+      "Secure",
+      "SPL Token Standard",
+      "DeFi Integration Ready",
+      "Smart Contract Support"
+    ]
+  }
+} 
