@@ -42,7 +42,7 @@ html {
 
 /* Glass effect */
 .glass {
-  @apply backdrop-blur-lg bg-purple-900/10 border border-purple-500/20 shadow-lg;
+  @apply backdrop-blur-lg bg-purple-900/10 border border-purple-500/20 rounded-lg shadow-lg;
 }
 
 :root {
@@ -61,6 +61,7 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 @keyframes float {
@@ -92,23 +93,25 @@ body {
 
 @layer components {
   .container {
-    @apply max-w-7xl w-full;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative;
   }
 
   .btn-primary {
     @apply px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg 
     hover:bg-purple-700 transition-colors duration-300 w-full sm:w-auto
-    focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+    focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+    flex items-center justify-center;
   }
 
   .btn-secondary {
     @apply px-6 py-3 bg-transparent text-white font-semibold rounded-lg 
     border-2 border-purple-500 hover:bg-purple-600 transition-colors duration-300 w-full sm:w-auto
-    focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+    focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2
+    flex items-center justify-center;
   }
 
   .glass {
-    @apply backdrop-blur-lg bg-purple-900/10 border border-purple-500/20 shadow-lg;
+    @apply backdrop-blur-lg bg-purple-900/10 border border-purple-500/20 rounded-lg shadow-lg;
   }
 }
 

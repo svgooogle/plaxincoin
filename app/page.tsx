@@ -5,9 +5,9 @@ import { BsShieldCheck, BsLightningCharge, BsCurrencyExchange } from 'react-icon
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full overflow-x-hidden">
+    <main className="min-h-screen w-full overflow-x-hidden bg-fixed">
       {/* Hero Section */}
-      <section className="container mx-auto py-12 md:py-24 px-4">
+      <section className="container py-12 md:py-24">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-center lg:text-left lg:w-1/2">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
@@ -25,15 +25,15 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="lg:w-1/2 flex justify-center">
+          <div className="lg:w-1/2 flex justify-center items-center">
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <Image
                 src="/logo.png"
                 alt="PLAXIN COIN Logo"
-                fill
+                width={384}
+                height={384}
                 className="object-contain animate-float drop-shadow-2xl"
                 priority
-                sizes="(max-width: 768px) 256px, 384px"
               />
             </div>
           </div>
@@ -41,13 +41,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto py-12 md:py-24 px-4">
+      <section className="container py-12 md:py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Преимущества PLAXIN COIN
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="glass p-8 rounded-lg text-center">
+            <div key={index} className="glass p-8 text-center">
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
               <p className="text-purple-100">{feature.description}</p>
@@ -57,13 +57,13 @@ export default function Home() {
       </section>
 
       {/* Roadmap Section */}
-      <section className="container mx-auto py-12 md:py-24 px-4">
+      <section className="container py-12 md:py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Дорожная карта
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {roadmap.map((phase, index) => (
-            <div key={index} className="glass p-8 rounded-lg">
+            <div key={index} className="glass p-8">
               <div className="text-2xl font-bold text-purple-300 mb-4">
                 {phase.quarter} {phase.year}
               </div>
@@ -80,8 +80,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto py-8 px-4">
-        <div className="glass p-8 rounded-lg">
+      <footer className="container py-8">
+        <div className="glass p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4 text-white">О проекте</h3>
