@@ -6,25 +6,25 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="container py-8 md:py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-center md:text-left mb-8 md:mb-0">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
+      <section className="container mx-auto py-12 md:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="text-center lg:text-left lg:w-1/2">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
               PLAXIN COIN
             </h1>
-            <p className="text-lg md:text-xl mb-6 text-purple-200">
+            <p className="text-lg md:text-xl mb-8 text-purple-200">
               Будущее криптовалюты начинается здесь
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="/trade" className="btn-primary">
                 Начать торговлю
               </Link>
-              <Link href="/whitepaper.md" target="_blank" className="btn-secondary">
+              <Link href="/whitepaper" className="btn-secondary">
                 Whitepaper
               </Link>
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="lg:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <TempLogo />
             </div>
@@ -33,15 +33,15 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="container py-12 md:py-24">
+      <section className="container mx-auto py-12 md:py-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
           Преимущества PLAXIN COIN
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="glass p-6 rounded-xl">
-              <div className="text-purple-400 text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+            <div key={index} className="glass p-8 rounded-xl text-center">
+              <div className="text-5xl mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
@@ -99,7 +99,7 @@ export default function Home() {
             <ul className="space-y-2">
               <li><Link href="/trade" className="text-gray-300 hover:text-purple-400">Торговля</Link></li>
               <li><Link href="/stake" className="text-gray-300 hover:text-purple-400">Стейкинг</Link></li>
-              <li><Link href="/whitepaper.md" className="text-gray-300 hover:text-purple-400">Whitepaper</Link></li>
+              <li><Link href="/whitepaper" className="text-gray-300 hover:text-purple-400">Whitepaper</Link></li>
             </ul>
           </div>
           <div>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
         </div>
         <div className="text-center mt-8 text-gray-400">
-          © 2024 PLAXIN COIN. Все права защищены.
+          © 2025 PLAXIN COIN. Все права защищены.
         </div>
       </footer>
     </main>
@@ -168,7 +168,7 @@ const steps = [
 const roadmap = [
   {
     quarter: "Q1",
-    year: "2024",
+    year: "2025",
     goals: [
       "Запуск основной сети",
       "Листинг на DEX",
@@ -177,7 +177,7 @@ const roadmap = [
   },
   {
     quarter: "Q2",
-    year: "2024",
+    year: "2025",
     goals: [
       "Запуск стейкинга",
       "Партнерства с проектами",
@@ -186,7 +186,7 @@ const roadmap = [
   },
   {
     quarter: "Q3",
-    year: "2024",
+    year: "2025",
     goals: [
       "Запуск NFT коллекции",
       "Интеграция с DeFi протоколами",
@@ -195,7 +195,7 @@ const roadmap = [
   },
   {
     quarter: "Q4",
-    year: "2024",
+    year: "2025",
     goals: [
       "Запуск собственного DEX",
       "Кроссчейн интеграции",
