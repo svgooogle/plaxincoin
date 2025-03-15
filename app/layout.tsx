@@ -1,13 +1,13 @@
-import React from 'react'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import MobileNav from './components/MobileNav'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'PLAXIN COIN',
-  description: 'The future of decentralized finance on Solana',
+  description: 'Будущее криптовалюты начинается здесь',
 }
 
 export default function RootLayout({
@@ -16,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru">
+      <body className={inter.className}>
+        {children}
+        <MobileNav />
+      </body>
     </html>
   )
 } 
